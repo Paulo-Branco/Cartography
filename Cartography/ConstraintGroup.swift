@@ -8,8 +8,8 @@
 
 import Foundation
 
-public class ConstraintGroup {
-    private var constraints: [Constraint] = []
+public final class ConstraintGroup: NSObject, NSCoding {
+    private var constraints: [Constraint]! = []
 
     @available(OSX, introduced=10.10)
     @available(iOS, introduced=8.0)
@@ -26,8 +26,8 @@ public class ConstraintGroup {
         }
     }
 
-    public init() {
-
+    public override init() {
+        super.init()
     }
 
     internal func replaceConstraints(constraints: [Constraint]) {
@@ -40,5 +40,20 @@ public class ConstraintGroup {
         for constraint in self.constraints {
             constraint.install()
         }
+    }
+    
+    public init?(coder aDecoder: NSCoder) {
+        super.init()
+        if aDecoder.containsValueForKey("constraints")
+        {
+            constraints = aDecoder.decodeObjectForKey("constraints")
+                as? [Constraint]
+        } else {
+            return nil
+        }
+    }
+    
+    public func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(constraints, forKey: "constraints")
     }
 }

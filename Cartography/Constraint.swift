@@ -12,10 +12,10 @@ import UIKit
 import AppKit
 #endif
 
-internal class Constraint {
+final internal class Constraint: NSObject, NSCoding {
     // Set to weak to avoid a retain cycle on the associated view.
     weak var view: View?
-    let layoutConstraint: NSLayoutConstraint
+    private(set) var layoutConstraint: NSLayoutConstraint!
 
     func install() {
         view?.addConstraint(layoutConstraint)
@@ -25,8 +25,28 @@ internal class Constraint {
         view?.removeConstraint(layoutConstraint)
     }
 
-    init(view: View, layoutConstraint: NSLayoutConstraint) {
+    init(view: View?, layoutConstraint: NSLayoutConstraint) {
         self.view = view
         self.layoutConstraint = layoutConstraint
+        super.init()
+    }
+    
+    //MARK: NSCoding Support
+    init?(coder aDecoder: NSCoder) {
+        super.init()
+        if aDecoder.containsValueForKey("view")
+            && aDecoder.containsValueForKey("layoutConstraint")
+        {
+            view = aDecoder.decodeObjectForKey("view") as? View
+            layoutConstraint = aDecoder.decodeObjectForKey("layoutConstraint")
+                as? NSLayoutConstraint
+        } else {
+            return nil
+        }
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(view, forKey: "view")
+        aCoder.encodeObject(layoutConstraint, forKey: "layoutConstraint")
     }
 }
