@@ -65,3 +65,12 @@ public func inset(edges: Edges, _ top: CGFloat, _ leading: CGFloat, _ bottom: CG
         Coefficients(1, -trailing)
     ])
 }
+
+public func inset(edges: Edges, _ edgeInsets: UIEdgeInsets) -> Expression<Edges> {
+    return Expression(edges, [
+        Coefficients(1, edgeInsets.top),
+        Coefficients(1, edgeInsets.left),
+        Coefficients(1, -edgeInsets.bottom),
+        Coefficients(1, -edgeInsets.right)
+        ])
+}
