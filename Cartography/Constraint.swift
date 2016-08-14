@@ -34,19 +34,19 @@ final internal class Constraint: NSObject, NSCoding {
     //MARK: NSCoding Support
     init?(coder aDecoder: NSCoder) {
         super.init()
-        if aDecoder.containsValueForKey("view")
-            && aDecoder.containsValueForKey("layoutConstraint")
+        if aDecoder.containsValue(forKey: "view")
+            && aDecoder.containsValue(forKey: "layoutConstraint")
         {
-            view = aDecoder.decodeObjectForKey("view") as? View
-            layoutConstraint = aDecoder.decodeObjectForKey("layoutConstraint")
+            view = aDecoder.decodeObject(forKey: "view") as? View
+            layoutConstraint = aDecoder.decodeObject(forKey: "layoutConstraint")
                 as? NSLayoutConstraint
         } else {
             return nil
         }
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(view, forKey: "view")
-        aCoder.encodeObject(layoutConstraint, forKey: "layoutConstraint")
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(view, forKey: "view")
+        aCoder.encode(layoutConstraint, forKey: "layoutConstraint")
     }
 }

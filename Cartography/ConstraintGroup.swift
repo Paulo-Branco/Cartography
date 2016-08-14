@@ -11,17 +11,17 @@ import Foundation
 public final class ConstraintGroup: NSObject, NSCoding {
     private var constraints: [Constraint]! = []
 
-    @available(OSX, introduced=10.10)
-    @available(iOS, introduced=8.0)
+    @available(OSX, introduced: 10.10)
+    @available(iOS, introduced: 8.0)
     public var active: Bool {
         get {
             return constraints
-                .map { $0.layoutConstraint.active }
+                .map { $0.layoutConstraint.isActive }
                 .reduce(true) { $0 && $1 }
         }
         set {
             for constraint in constraints {
-                constraint.layoutConstraint.active = newValue
+                constraint.layoutConstraint.isActive = newValue
             }
         }
     }
@@ -30,7 +30,7 @@ public final class ConstraintGroup: NSObject, NSCoding {
         super.init()
     }
 
-    internal func replaceConstraints(constraints: [Constraint]) {
+    internal func replaceConstraints(_ constraints: [Constraint]) {
         for constraint in self.constraints {
             constraint.uninstall()
         }
@@ -44,16 +44,16 @@ public final class ConstraintGroup: NSObject, NSCoding {
     
     public init?(coder aDecoder: NSCoder) {
         super.init()
-        if aDecoder.containsValueForKey("constraints")
+        if aDecoder.containsValue(forKey: "constraints")
         {
-            constraints = aDecoder.decodeObjectForKey("constraints")
+            constraints = aDecoder.decodeObject(forKey: "constraints")
                 as? [Constraint]
         } else {
             return nil
         }
     }
     
-    public func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(constraints, forKey: "constraints")
+    public func encode(with aCoder: NSCoder) {
+        aCoder.encode(constraints, forKey: "constraints")
     }
 }
