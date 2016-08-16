@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "54F6A837195C20C100313D24"
                BuildableName = "Cartography.framework"
-               BlueprintName = "Cartography-Mac"
+               BlueprintName = "Cartography-macOS"
                ReferencedContainer = "container:Cartography.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "54F6A841195C20C200313D24"
-               BuildableName = "Cartography-Mac-Tests.xctest"
-               BlueprintName = "Cartography-Mac-Tests"
+               BuildableName = "Cartography-macOS-Tests.xctest"
+               BlueprintName = "Cartography-macOS-Tests"
                ReferencedContainer = "container:Cartography.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -57,7 +57,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "54F6A837195C20C100313D24"
             BuildableName = "Cartography.framework"
-            BlueprintName = "Cartography-Mac"
+            BlueprintName = "Cartography-macOS"
             ReferencedContainer = "container:Cartography.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

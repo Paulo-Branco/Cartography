@@ -6,12 +6,6 @@
 //  Copyright (c) 2014 Robert Böhnke. All rights reserved.
 //
 
-#if os(iOS) || os(tvOS)
-import UIKit
-#else
-import AppKit
-#endif
-
 public struct Point: Compound, RelativeCompoundEquality, RelativeCompoundInequality {
     public let context: Context
     public let properties: [Property]

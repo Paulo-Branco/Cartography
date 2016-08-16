@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Robert Böhnke. All rights reserved.
 //
 
-import Foundation
-
 public struct LayoutProxy {
     /// The width of the view.
     public var width: Dimension {

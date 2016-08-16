@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Robert Böhnke. All rights reserved.
 //
 
-import Foundation
+import CoreGraphics
 
 public struct Coefficients {
     var multiplier: CGFloat = 1

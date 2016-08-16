@@ -15,7 +15,7 @@ import AppKit
 final internal class Constraint: NSObject, NSCoding {
     // Set to weak to avoid a retain cycle on the associated view.
     weak var view: View?
-    private(set) var layoutConstraint: NSLayoutConstraint!
+    fileprivate(set) var layoutConstraint: NSLayoutConstraint!
 
     func install() {
         view?.addConstraint(layoutConstraint)

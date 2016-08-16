@@ -16,7 +16,7 @@ public class Context {
     internal var constraints: [Constraint] = []
 
     internal func addConstraint(_ from: Property, to: Property? = nil, coefficients: Coefficients = Coefficients(), relation: NSLayoutRelation = .equal) -> NSLayoutConstraint {
-        from.view.car_translatesAutoresizingMaskIntoConstraints = false
+        from.view.translatesAutoresizingMaskIntoConstraints = false
 
         let layoutConstraint = NSLayoutConstraint(item: from.view,
                                                   attribute: from.attribute,

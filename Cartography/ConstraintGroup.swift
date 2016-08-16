@@ -9,7 +9,7 @@
 import Foundation
 
 public final class ConstraintGroup: NSObject, NSCoding {
-    private var constraints: [Constraint]! = []
+    fileprivate var constraints: [Constraint]
 
     @available(OSX, introduced: 10.10)
     @available(iOS, introduced: 8.0)
@@ -27,6 +27,7 @@ public final class ConstraintGroup: NSObject, NSCoding {
     }
 
     public override init() {
+        constraints = []
         super.init()
     }
 
@@ -43,14 +44,13 @@ public final class ConstraintGroup: NSObject, NSCoding {
     }
     
     public init?(coder aDecoder: NSCoder) {
-        super.init()
-        if aDecoder.containsValue(forKey: "constraints")
-        {
+        if aDecoder.containsValue(forKey: "constraints") {
             constraints = aDecoder.decodeObject(forKey: "constraints")
-                as? [Constraint]
+                as? [Constraint] ?? []
         } else {
             return nil
         }
+        super.init()
     }
     
     public func encode(with aCoder: NSCoder) {

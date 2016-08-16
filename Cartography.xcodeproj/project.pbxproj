@@ -46,7 +46,6 @@
 		54BF29B31A934F240066ED10 /* AlignSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BF29B11A934ECF0066ED10 /* AlignSpec.swift */; };
 		54BF29B41A934F250066ED10 /* AlignSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BF29B11A934ECF0066ED10 /* AlignSpec.swift */; };
 		54BF29B51A9350170066ED10 /* Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BF29AF1A9348B30066ED10 /* Align.swift */; };
-		54C96A17195063CD000CDD27 /* Cartography.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C96A16195063CD000CDD27 /* Cartography.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54C96A1D195063CD000CDD27 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C96A11195063CD000CDD27 /* Cartography.framework */; };
 		54C96A30195064A6000CDD27 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C96A2F195064A6000CDD27 /* Property.swift */; };
 		54DE2B9F1ABE2BC5004D62D8 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DE2B9E1ABE2BC5004D62D8 /* TestView.swift */; };
@@ -54,7 +53,6 @@
 		54DF9F3319DAD8DA00EE3609 /* Constrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DF9F3219DAD8DA00EE3609 /* Constrain.swift */; };
 		54DF9F3419DAD8DD00EE3609 /* Constrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DF9F3219DAD8DA00EE3609 /* Constrain.swift */; };
 		54F6A843195C20C200313D24 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F6A838195C20C100313D24 /* Cartography.framework */; };
-		54F6A851195C213A00313D24 /* Cartography.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C96A16195063CD000CDD27 /* Cartography.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54F6A852195C213A00313D24 /* Coefficients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546E9E8E1950A33700B16707 /* Coefficients.swift */; };
 		54F6A853195C213A00313D24 /* Compound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA3A3F1951A41B0094B82A /* Compound.swift */; };
 		54F6A854195C213A00313D24 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546E9E8C1950A31100B16707 /* Dimension.swift */; };
@@ -81,7 +79,6 @@
 		54FA3A421951A8070094B82A /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA3A411951A8070094B82A /* Size.swift */; };
 		54FA3A441951A9730094B82A /* SizeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA3A431951A9730094B82A /* SizeSpec.swift */; };
 		632F09271BF1E7FC002431A3 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 632F090A1BF1E7AA002431A3 /* Cartography.framework */; };
-		632F09341BF1F0DD002431A3 /* Cartography.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C96A16195063CD000CDD27 /* Cartography.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		632F09351BF1F127002431A3 /* Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BF29AF1A9348B30066ED10 /* Align.swift */; };
 		632F09361BF1F127002431A3 /* Coefficients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546E9E8E1950A33700B16707 /* Coefficients.swift */; };
 		632F09371BF1F127002431A3 /* Compound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA3A3F1951A41B0094B82A /* Compound.swift */; };
@@ -205,7 +202,6 @@
 		54BF29B11A934ECF0066ED10 /* AlignSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AlignSpec.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		54C96A11195063CD000CDD27 /* Cartography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cartography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54C96A15195063CD000CDD27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		54C96A16195063CD000CDD27 /* Cartography.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cartography.h; sourceTree = "<group>"; };
 		54C96A1C195063CD000CDD27 /* Cartography-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cartography-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54C96A22195063CD000CDD27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54C96A23195063CD000CDD27 /* DimensionSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DimensionSpec.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -213,7 +209,7 @@
 		54DE2B9E1ABE2BC5004D62D8 /* TestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		54DF9F3219DAD8DA00EE3609 /* Constrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constrain.swift; sourceTree = "<group>"; };
 		54F6A838195C20C100313D24 /* Cartography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cartography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		54F6A842195C20C200313D24 /* Cartography-Mac-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cartography-Mac-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		54F6A842195C20C200313D24 /* Cartography-macOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cartography-macOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F6A863195C217800313D24 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		54FA3A351950FD320094B82A /* Priority.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Priority.swift; sourceTree = "<group>"; };
 		54FA3A371950FD8E0094B82A /* PrioritySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrioritySpec.swift; sourceTree = "<group>"; };
@@ -327,7 +323,7 @@
 				54C96A11195063CD000CDD27 /* Cartography.framework */,
 				54C96A1C195063CD000CDD27 /* Cartography-iOS-Tests.xctest */,
 				54F6A838195C20C100313D24 /* Cartography.framework */,
-				54F6A842195C20C200313D24 /* Cartography-Mac-Tests.xctest */,
+				54F6A842195C20C200313D24 /* Cartography-macOS-Tests.xctest */,
 				632F090A1BF1E7AA002431A3 /* Cartography.framework */,
 				632F09221BF1E7FC002431A3 /* Cartography-tvOS-tests.xctest */,
 			);
@@ -337,7 +333,6 @@
 		54C96A13195063CD000CDD27 /* Cartography */ = {
 			isa = PBXGroup;
 			children = (
-				54C96A16195063CD000CDD27 /* Cartography.h */,
 				54BF29AF1A9348B30066ED10 /* Align.swift */,
 				546E9E8E1950A33700B16707 /* Coefficients.swift */,
 				54FA3A3F1951A41B0094B82A /* Compound.swift */,
@@ -414,7 +409,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54C96A17195063CD000CDD27 /* Cartography.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +416,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54F6A851195C213A00313D24 /* Cartography.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,7 +423,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				632F09341BF1F0DD002431A3 /* Cartography.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,9 +467,9 @@
 			productReference = 54C96A1C195063CD000CDD27 /* Cartography-iOS-Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		54F6A837195C20C100313D24 /* Cartography-Mac */ = {
+		54F6A837195C20C100313D24 /* Cartography-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 54F6A84B195C20C200313D24 /* Build configuration list for PBXNativeTarget "Cartography-Mac" */;
+			buildConfigurationList = 54F6A84B195C20C200313D24 /* Build configuration list for PBXNativeTarget "Cartography-macOS" */;
 			buildPhases = (
 				54F6A833195C20C100313D24 /* Sources */,
 				54F6A834195C20C100313D24 /* Frameworks */,
@@ -488,14 +480,14 @@
 			);
 			dependencies = (
 			);
-			name = "Cartography-Mac";
+			name = "Cartography-macOS";
 			productName = "Cartography-Mac";
 			productReference = 54F6A838195C20C100313D24 /* Cartography.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		54F6A841195C20C200313D24 /* Cartography-Mac-Tests */ = {
+		54F6A841195C20C200313D24 /* Cartography-macOS-Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 54F6A84E195C20C200313D24 /* Build configuration list for PBXNativeTarget "Cartography-Mac-Tests" */;
+			buildConfigurationList = 54F6A84E195C20C200313D24 /* Build configuration list for PBXNativeTarget "Cartography-macOS-Tests" */;
 			buildPhases = (
 				54F6A83E195C20C200313D24 /* Sources */,
 				54F6A83F195C20C200313D24 /* Frameworks */,
@@ -507,9 +499,9 @@
 			dependencies = (
 				54F6A845195C20C200313D24 /* PBXTargetDependency */,
 			);
-			name = "Cartography-Mac-Tests";
+			name = "Cartography-macOS-Tests";
 			productName = "Cartography-MacTests";
-			productReference = 54F6A842195C20C200313D24 /* Cartography-Mac-Tests.xctest */;
+			productReference = 54F6A842195C20C200313D24 /* Cartography-macOS-Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		632F09091BF1E7AA002431A3 /* Cartography-tvOS */ = {
@@ -596,8 +588,8 @@
 			targets = (
 				54C96A10195063CD000CDD27 /* Cartography-iOS */,
 				54C96A1B195063CD000CDD27 /* Cartography-iOS-Tests */,
-				54F6A837195C20C100313D24 /* Cartography-Mac */,
-				54F6A841195C20C200313D24 /* Cartography-Mac-Tests */,
+				54F6A837195C20C100313D24 /* Cartography-macOS */,
+				54F6A841195C20C200313D24 /* Cartography-macOS-Tests */,
 				632F09091BF1E7AA002431A3 /* Cartography-tvOS */,
 				632F09211BF1E7FC002431A3 /* Cartography-tvOS-tests */,
 			);
@@ -805,7 +797,7 @@
 		};
 		54F6A845195C20C200313D24 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 54F6A837195C20C100313D24 /* Cartography-Mac */;
+			target = 54F6A837195C20C100313D24 /* Cartography-macOS */;
 			targetProxy = 54F6A844195C20C200313D24 /* PBXContainerItemProxy */;
 		};
 		632F09291BF1E7FC002431A3 /* PBXTargetDependency */ = {
@@ -859,6 +851,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -899,6 +892,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -925,7 +919,6 @@
 				PRODUCT_NAME = Cartography;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -948,7 +941,6 @@
 				PRODUCT_NAME = Cartography;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -970,7 +962,6 @@
 				OTHER_SWIFT_FLAGS = "-DTEST";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.robertboehnke.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -989,7 +980,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.robertboehnke.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1203,7 +1193,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		54F6A84B195C20C200313D24 /* Build configuration list for PBXNativeTarget "Cartography-Mac" */ = {
+		54F6A84B195C20C200313D24 /* Build configuration list for PBXNativeTarget "Cartography-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				54F6A84C195C20C200313D24 /* Debug */,
@@ -1212,7 +1202,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		54F6A84E195C20C200313D24 /* Build configuration list for PBXNativeTarget "Cartography-Mac-Tests" */ = {
+		54F6A84E195C20C200313D24 /* Build configuration list for PBXNativeTarget "Cartography-macOS-Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				54F6A84F195C20C200313D24 /* Debug */,

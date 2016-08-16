@@ -6,12 +6,6 @@
 //  Copyright (c) 2015 Robert Böhnke. All rights reserved.
 //
 
-#if os(iOS) || os(tvOS)
-import UIKit
-#else
-import AppKit
-#endif
-
 internal extension Dictionary {
     init(_ pairs: [Element]) {
         self.init()

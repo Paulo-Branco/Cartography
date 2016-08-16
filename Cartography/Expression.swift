@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Robert Böhnke. All rights reserved.
 //
 
-import Foundation
-
 public struct Expression<T> {
     let value: T
     var coefficients: [Coefficients]
