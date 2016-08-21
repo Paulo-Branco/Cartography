@@ -9,7 +9,7 @@
 import Foundation
 
 public final class ConstraintGroup: NSObject, NSCoding {
-    fileprivate var constraints: [Constraint]
+    private var constraints: [Constraint]
 
     @available(OSX, introduced: 10.10)
     @available(iOS, introduced: 8.0)

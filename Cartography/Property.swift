@@ -34,7 +34,7 @@ public protocol NumericalEquality : Property { }
 ///
 @discardableResult
 public func == (lhs: NumericalEquality, rhs: CGFloat) -> NSLayoutConstraint {
-    return lhs.context.addConstraint(lhs, coefficients: Coefficients(1, rhs))
+    return lhs.context.addConstraint(from: lhs, coefficients: Coefficients(1, rhs))
 }
 
 /// Properties conforming to this protocol can use the `==` operator with other
@@ -51,7 +51,7 @@ public protocol RelativeEquality : Property { }
 ///
 @discardableResult
 public func == <P: RelativeEquality>(lhs: P, rhs: Expression<P>) -> NSLayoutConstraint {
-    return lhs.context.addConstraint(lhs, to: rhs.value, coefficients: rhs.coefficients[0])
+    return lhs.context.addConstraint(from: lhs, to: rhs.value, coefficients: rhs.coefficients[0])
 }
 
 /// Declares a property equal to another property.
@@ -62,7 +62,7 @@ public func == <P: RelativeEquality>(lhs: P, rhs: Expression<P>) -> NSLayoutCons
 ///
 @discardableResult
 public func == <P: RelativeEquality>(lhs: P, rhs: P) -> NSLayoutConstraint {
-    return lhs.context.addConstraint(lhs, to: rhs)
+    return lhs.context.addConstraint(from: lhs, to: rhs)
 }
 
 // MARK: Inequality
@@ -81,7 +81,7 @@ public protocol NumericalInequality : Property { }
 ///
 @discardableResult
 public func <= (lhs: NumericalInequality, rhs: CGFloat) -> NSLayoutConstraint {
-    return lhs.context.addConstraint(lhs, coefficients: Coefficients(1, rhs), relation: NSLayoutRelation.lessThanOrEqual)
+    return lhs.context.addConstraint(from: lhs, coefficients: Coefficients(1, rhs), relation: .lessThanOrEqual)
 }
 
 /// Declares a property greater than or equal to a numerical constant.
@@ -94,7 +94,7 @@ public func <= (lhs: NumericalInequality, rhs: CGFloat) -> NSLayoutConstraint {
 ///
 @discardableResult
 public func >= (lhs: NumericalInequality, rhs: CGFloat) -> NSLayoutConstraint {
-    return lhs.context.addConstraint(lhs, coefficients: Coefficients(1, rhs), relation: NSLayoutRelation.greaterThanOrEqual)
+    return lhs.context.addConstraint(from: lhs, coefficients: Coefficients(1, rhs), relation: .greaterThanOrEqual)
 }
 
 /// Properties conforming to this protocol can use the `<=` and `>=` operators
@@ -111,7 +111,7 @@ public protocol RelativeInequality : Property { }
 ///
 @discardableResult
 public func <= <P: RelativeInequality>(lhs: P, rhs: P) -> NSLayoutConstraint {
-    return lhs.context.addConstraint(lhs, to: rhs, relation: NSLayoutRelation.lessThanOrEqual)
+    return lhs.context.addConstraint(from: lhs, to: rhs, relation: .lessThanOrEqual)
 }
 
 /// Declares a property greater than or equal to another property.
@@ -124,7 +124,7 @@ public func <= <P: RelativeInequality>(lhs: P, rhs: P) -> NSLayoutConstraint {
 ///
 @discardableResult
 public func >= <P: RelativeInequality>(lhs: P, rhs: P) -> NSLayoutConstraint {
-    return lhs.context.addConstraint(lhs, to: rhs, relation: NSLayoutRelation.greaterThanOrEqual)
+    return lhs.context.addConstraint(from: lhs, to: rhs, relation: .greaterThanOrEqual)
 }
 
 /// Declares a property less than or equal to the result of an expression.
@@ -137,7 +137,7 @@ public func >= <P: RelativeInequality>(lhs: P, rhs: P) -> NSLayoutConstraint {
 ///
 @discardableResult
 public func <= <P: RelativeInequality>(lhs: P, rhs: Expression<P>) -> NSLayoutConstraint {
-    return lhs.context.addConstraint(lhs, to: rhs.value, coefficients: rhs.coefficients[0], relation: NSLayoutRelation.lessThanOrEqual)
+    return lhs.context.addConstraint(from: lhs, to: rhs.value, coefficients: rhs.coefficients[0], relation: .lessThanOrEqual)
 }
 
 /// Declares a property greater than or equal to the result of an expression.
@@ -150,7 +150,7 @@ public func <= <P: RelativeInequality>(lhs: P, rhs: Expression<P>) -> NSLayoutCo
 ///
 @discardableResult
 public func >= <P: RelativeInequality>(lhs: P, rhs: Expression<P>) -> NSLayoutConstraint {
-    return lhs.context.addConstraint(lhs, to: rhs.value, coefficients: rhs.coefficients[0], relation: NSLayoutRelation.greaterThanOrEqual)
+    return lhs.context.addConstraint(from: lhs, to: rhs.value, coefficients: rhs.coefficients[0], relation: .greaterThanOrEqual)
 }
 
 // Mark: Addition

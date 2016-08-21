@@ -14,38 +14,63 @@ import AppKit
 
 public class Context {
     internal var constraints: [Constraint] = []
-
-    internal func addConstraint(_ from: Property, to: Property? = nil, coefficients: Coefficients = Coefficients(), relation: NSLayoutRelation = .equal) -> NSLayoutConstraint {
-        from.view.translatesAutoresizingMaskIntoConstraints = false
-
-        let layoutConstraint = NSLayoutConstraint(item: from.view,
-                                                  attribute: from.attribute,
-                                                  relatedBy: relation,
-                                                  toItem: to?.view,
-                                                  attribute: to?.attribute ?? .notAnAttribute,
-                                                  multiplier: CGFloat(coefficients.multiplier),
-                                                  constant: CGFloat(coefficients.constant))
+    
+    internal func addConstraint(
+        from: Property,
+        to: Property? = nil,
+        coefficients: Coefficients = Coefficients(),
+        relation: NSLayoutRelation = .equal
+        )
+        -> NSLayoutConstraint
+    {
+        let layoutConstraint = NSLayoutConstraint(
+            item: from.view,
+            attribute: from.attribute,
+            relatedBy: relation,
+            toItem: to?.view,
+            attribute: to?.attribute ?? .notAnAttribute,
+            multiplier: CGFloat(coefficients.multiplier),
+            constant: CGFloat(coefficients.constant)
+        )
 
         if let to = to {
-            if let common = closestCommonAncestor(from.view, b: to.view ) {
-                constraints.append(Constraint(view: common, layoutConstraint: layoutConstraint))
+            if let common = constraintsHolder(of: from.view, and: to.view ) {
+                constraints.append(Constraint(holder: common, layoutConstraint: layoutConstraint))
             } else {
                 fatalError("No common superview found between \(from.view) and \(to.view)")
             }
         } else {
-            constraints.append(Constraint(view: from.view, layoutConstraint: layoutConstraint))
+            constraints.append(Constraint(holder: from.view, layoutConstraint: layoutConstraint))
         }
 
         return layoutConstraint
     }
-
-    internal func addConstraint(_ from: Compound, coefficients: [Coefficients]? = nil, to: Compound? = nil, relation: NSLayoutRelation = NSLayoutRelation.equal) -> [NSLayoutConstraint] {
+    
+    internal func addConstraint(
+        from: Compound,
+        to: Compound? = nil,
+        coefficients: [Coefficients]? = nil,
+        relation: NSLayoutRelation = .equal
+        ) -> [NSLayoutConstraint]
+    {
         var results: [NSLayoutConstraint] = []
-
+        
+        assert(from.properties.count == to?.properties.count || to == nil)
+        assert(
+            from.properties.count == coefficients?.count
+                || coefficients == nil
+        )
+        
         for i in 0..<from.properties.count {
-            let n: Coefficients = coefficients?[i] ?? Coefficients()
-
-            results.append(addConstraint(from.properties[i], to: to?.properties[i], coefficients: n, relation: relation))
+            
+            let constraint = addConstraint(
+                from: from.properties[i],
+                to: to?.properties[i], 
+                coefficients: coefficients?[i] ?? Coefficients(),
+                relation: relation
+            )
+            
+            results.append(constraint)
         }
 
         return results

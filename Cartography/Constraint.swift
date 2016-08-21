@@ -14,30 +14,30 @@ import AppKit
 
 final internal class Constraint: NSObject, NSCoding {
     // Set to weak to avoid a retain cycle on the associated view.
-    weak var view: View?
-    fileprivate(set) var layoutConstraint: NSLayoutConstraint!
+    internal weak var holder: View?
+    internal private(set) var layoutConstraint: NSLayoutConstraint!
 
-    func install() {
-        view?.addConstraint(layoutConstraint)
+    internal func install() {
+        holder?.addConstraint(layoutConstraint)
     }
 
-    func uninstall() {
-        view?.removeConstraint(layoutConstraint)
+    internal func uninstall() {
+        holder?.removeConstraint(layoutConstraint)
     }
 
-    init(view: View?, layoutConstraint: NSLayoutConstraint) {
-        self.view = view
+    internal init(holder: View?, layoutConstraint: NSLayoutConstraint) {
+        self.holder = holder
         self.layoutConstraint = layoutConstraint
         super.init()
     }
     
     //MARK: NSCoding Support
-    init?(coder aDecoder: NSCoder) {
+    internal init?(coder aDecoder: NSCoder) {
         super.init()
-        if aDecoder.containsValue(forKey: "view")
+        if aDecoder.containsValue(forKey: "holder")
             && aDecoder.containsValue(forKey: "layoutConstraint")
         {
-            view = aDecoder.decodeObject(forKey: "view") as? View
+            holder = aDecoder.decodeObject(forKey: "holder") as? View
             layoutConstraint = aDecoder.decodeObject(forKey: "layoutConstraint")
                 as? NSLayoutConstraint
         } else {
@@ -45,8 +45,8 @@ final internal class Constraint: NSObject, NSCoding {
         }
     }
     
-    func encode(with aCoder: NSCoder) {
-        aCoder.encode(view, forKey: "view")
+    internal func encode(with aCoder: NSCoder) {
+        aCoder.encode(holder, forKey: "holder")
         aCoder.encode(layoutConstraint, forKey: "layoutConstraint")
     }
 }
