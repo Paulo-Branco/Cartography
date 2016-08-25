@@ -12,8 +12,6 @@ import UIKit
 import AppKit
 #endif
 
-import SwiftExt
-
 internal func constraintsHolder(of a: View, and b: View) -> View? {
     var checkedViewsAlongAToSuper = [ObjectIdentifier: View]()
     var checkedViewsAlongBToSuper = [ObjectIdentifier: View]()
