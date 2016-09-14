@@ -13,7 +13,7 @@ public final class ConstraintGroup: NSObject, NSCoding {
 
     @available(OSX, introduced: 10.10)
     @available(iOS, introduced: 8.0)
-    public var active: Bool {
+    public var isActive: Bool {
         get {
             return constraints
                 .map { $0.layoutConstraint.isActive }
